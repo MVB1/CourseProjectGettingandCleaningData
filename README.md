@@ -47,7 +47,7 @@ script that contains all codes necessary to generate a tidy data set with the av
 
 #####*Usage*
 
-The **run_analysis.R** script has been optimized for Windows 7 Professional, R version 3.1.2, and RStudio Version 0.98.1087; the *reshape2* package is required. Please skip the optional download and decompression steps if your data has already been saved on your computer. The script assumes that you did not change any of the names of the original files and folders, and that they are located in your working directory (in a folder named *data2*).  
+The **run_analysis.R** script has been optimized for Windows 7 Professional, R version 3.1.2, and RStudio Version 0.98.1087; the *reshape2* package is required. The download and decompression steps are optional and will be skipped if the *UCI HAR Dataset* has already been saved on your computer (in your working directory in a folder named *data2*; the script assumes that you did not change any of the original files and folders).  
 
 ***
 
