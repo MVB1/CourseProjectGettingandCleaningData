@@ -18,27 +18,27 @@ dateStarted
 ## Create folder for data (if that folder does not exist yet)
 if(!file.exists("./data2")){dir.create("./data2")}
 
-## Download zip file
-## Please skip if you already downloaded zip file
+## Download and decompress zip file (if that file does not exist yet)
 Download <- function () {
   message("Downloading zip file")
   fileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileUrl, destfile="./data2/Course_Project.zip")
   message("Download completed")
 }
-Download()
-dateDownloaded <- date()
-dateDownloaded
 
-## Unzip file
-## Please skip if you already decompressed the zip file
 Unzip <- function () {
   message("Decompressing files")
   message("This may take a few minutes")
   unzip(zipfile="./data2/Course_Project.zip", exdir="./data2")
   message("Decompression completed") 
 }
+
+if(!file.exists("./data2/UCI HAR Dataset")){
+Download()
+dateDownloaded <- date()
+dateDownloaded
 Unzip()
+}
 
 ## Read train data
 TrainActivity <- read.table("./data2/UCI HAR Dataset/train/y_train.txt", header=FALSE)
