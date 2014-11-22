@@ -37,7 +37,7 @@ You should create one R script called **run_analysis.R** that does the following
 
 #####*Data Set*
 
-For this course project the *Human Activity Recognition Using Smartphones Data Set (UCI HAR Dataset)* is used, which is based on experimental data obtained from 30 volunteers. Each individual performed six activities (i.e. walking, walking upstairs, walking downstairs, sitting, standing, and laying). An accelerometer and gyroscope, embedded in a smartphone, allowed measurements of linear acceleration and velocity. 
+For this course project the *Human Activity Recognition Using Smartphones Data Set (UCI HAR Dataset)* is used, which is based on experimental data obtained from 30 volunteers. Each individual performed six activities (i.e. walking, walking upstairs, walking downstairs, sitting, standing, and laying). An accelerometer and gyroscope, embedded in a smartphone, allowed measurements of linear acceleration (in standard gravity units 'g') and velocity (in radians/second). 
 
 The training data (**Train Data**) contains 70% of individuals and the test data (**Test Data**) the remaining 30% of individuals. This course project uses the activity labels, the identifiers of subjects who carried out the experiments, and a 561-feature vector with time and frequency domain variables. More detailed information regarding the training and test data is provided on the following website: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
