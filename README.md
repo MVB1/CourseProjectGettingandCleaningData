@@ -44,7 +44,6 @@ script that contains all codes necessary to generate a tidy data set with the av
     unzip(zipfile="./data2/Course_Project.zip", exdir="./data2")
     }
     ```
-    
     ```
     if(!file.exists("./data2/UCI HAR Dataset")){
     Download()
@@ -69,9 +68,7 @@ script that contains all codes necessary to generate a tidy data set with the av
     names(Subject) <- c("subject")
     FeatureNames <- read.table("./data2/UCI HAR Dataset/features.txt", sep="", header=FALSE)
     FeatureNamesChar <- as.character(FeatureNames[,2])
-    
     ```
-    
     ```
     FeatureNamesChar <- gsub("^t", "time", FeatureNamesChar)
     FeatureNamesChar <- gsub("Acc", "accelerometer", FeatureNamesChar)
