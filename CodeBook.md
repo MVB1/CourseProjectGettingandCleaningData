@@ -76,7 +76,7 @@ Included in data set:
 
 ***
 
-#####*Original Variables*
+#####*Original Feature Variables*
 
 As described in the feature_info.txt file: 
 
@@ -178,7 +178,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 
 #####*Data Structure*
 
-The data structure of the original training and test data is shown below. 
+The data structures of the original training and test data are shown below. 
 
 **Train Data**
 
@@ -500,7 +500,7 @@ Tidy data is generated with the average of each variable for each activity and e
 ***
 
 
-#####*Adjusted Variables*
+#####*Selected and Adjusted Variables*
 
 Aforementioned steps result in the following 68 variables:
 
