@@ -76,6 +76,105 @@ Included in data set:
 
 ***
 
+#####*Original Variables*
+
+As described in the feature_info.txt file: 
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+* tBodyAcc-XYZ
+
+* tGravityAcc-XYZ
+
+* tBodyAccJerk-XYZ
+
+* tBodyGyro-XYZ
+
+* tBodyGyroJerk-XYZ
+
+* tBodyAccMag
+
+* tGravityAccMag
+
+* tBodyAccJerkMag
+
+* tBodyGyroMag
+
+* tBodyGyroJerkMag
+
+* fBodyAcc-XYZ
+
+* fBodyAccJerk-XYZ
+
+* fBodyGyro-XYZ
+
+* fBodyAccMag
+
+* fBodyAccJerkMag
+
+* fBodyGyroMag
+
+* fBodyGyroJerkMag
+
+
+The set of variables that were estimated from these signals are: 
+
+* mean(): Mean value
+
+* std(): Standard deviation
+
+* mad(): Median absolute deviation 
+
+* max(): Largest value in array
+
+* min(): Smallest value in array
+
+* sma(): Signal magnitude area
+
+* energy(): Energy measure. Sum of the squares divided by the number of values
+
+* iqr(): Interquartile range 
+
+* entropy(): Signal entropy
+
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+
+* correlation(): correlation coefficient between two signals
+
+* maxInds(): index of the frequency component with largest magnitude
+
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+
+* skewness(): skewness of the frequency domain signal 
+
+* kurtosis(): kurtosis of the frequency domain signal 
+
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window
+
+* angle(): Angle between to vectors
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+* gravityMean
+
+* tBodyAccMean
+
+* tBodyAccJerkMean
+
+* tBodyGyroMean
+
+* tBodyGyroJerkMean
+
+
+***
+
 
 #####*Data Structure*
 
@@ -182,12 +281,26 @@ The training and test data are combined.
 
 #####*Original Variable Names*
 
-Original variable names contain both upper and lower cases, as well as abbreviations, dashes, and brackets. Only variable names that contain information on mean and standard deviation are selected (first 10 variable names are shown).
+Original variable names contain both upper and lower cases, as well as abbreviations, dashes, and brackets. Only variable names that contain information on mean and standard deviation are selected.
 
 ```
- [1] "tBodyAcc-mean()-X" "tBodyAcc-mean()-Y" "tBodyAcc-mean()-Z" "tBodyAcc-std()-X" 
- [5] "tBodyAcc-std()-Y"  "tBodyAcc-std()-Z"  "tBodyAcc-mad()-X"  "tBodyAcc-mad()-Y" 
- [9] "tBodyAcc-mad()-Z"  "tBodyAcc-max()-X" 
+ [1] "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"           "tBodyAcc-mean()-Z"           "tBodyAcc-std()-X"           
+ [5] "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"            "tGravityAcc-mean()-X"        "tGravityAcc-mean()-Y"       
+ [9] "tGravityAcc-mean()-Z"        "tGravityAcc-std()-X"         "tGravityAcc-std()-Y"         "tGravityAcc-std()-Z"        
+[13] "tBodyAccJerk-mean()-X"       "tBodyAccJerk-mean()-Y"       "tBodyAccJerk-mean()-Z"       "tBodyAccJerk-std()-X"       
+[17] "tBodyAccJerk-std()-Y"        "tBodyAccJerk-std()-Z"        "tBodyGyro-mean()-X"          "tBodyGyro-mean()-Y"         
+[21] "tBodyGyro-mean()-Z"          "tBodyGyro-std()-X"           "tBodyGyro-std()-Y"           "tBodyGyro-std()-Z"          
+[25] "tBodyGyroJerk-mean()-X"      "tBodyGyroJerk-mean()-Y"      "tBodyGyroJerk-mean()-Z"      "tBodyGyroJerk-std()-X"      
+[29] "tBodyGyroJerk-std()-Y"       "tBodyGyroJerk-std()-Z"       "tBodyAccMag-mean()"          "tBodyAccMag-std()"          
+[33] "tGravityAccMag-mean()"       "tGravityAccMag-std()"        "tBodyAccJerkMag-mean()"      "tBodyAccJerkMag-std()"      
+[37] "tBodyGyroMag-mean()"         "tBodyGyroMag-std()"          "tBodyGyroJerkMag-mean()"     "tBodyGyroJerkMag-std()"     
+[41] "fBodyAcc-mean()-X"           "fBodyAcc-mean()-Y"           "fBodyAcc-mean()-Z"           "fBodyAcc-std()-X"           
+[45] "fBodyAcc-std()-Y"            "fBodyAcc-std()-Z"            "fBodyAccJerk-mean()-X"       "fBodyAccJerk-mean()-Y"      
+[49] "fBodyAccJerk-mean()-Z"       "fBodyAccJerk-std()-X"        "fBodyAccJerk-std()-Y"        "fBodyAccJerk-std()-Z"       
+[53] "fBodyGyro-mean()-X"          "fBodyGyro-mean()-Y"          "fBodyGyro-mean()-Z"          "fBodyGyro-std()-X"          
+[57] "fBodyGyro-std()-Y"           "fBodyGyro-std()-Z"           "fBodyAccMag-mean()"          "fBodyAccMag-std()"          
+[61] "fBodyBodyAccJerkMag-mean()"  "fBodyBodyAccJerkMag-std()"   "fBodyBodyGyroMag-mean()"     "fBodyBodyGyroMag-std()"     
+[65] "fBodyBodyGyroJerkMag-mean()" "fBodyBodyGyroJerkMag-std()"  
 ```
 
 ***
@@ -198,16 +311,72 @@ Original variable names contain both upper and lower cases, as well as abbreviat
 For this course project variable names are adjusted to improve clarity. Adjusted names, therefore, contain lower cases; abbreviations, dashes, and brackets are removed.
 
 ```
- [1] "timebodyaccelerometermeanx"                
- [2] "timebodyaccelerometermeany"                
- [3] "timebodyaccelerometermeanz"                
- [4] "timebodyaccelerometerstandarddeviationx"   
- [5] "timebodyaccelerometerstandarddeviationy"   
- [6] "timebodyaccelerometerstandarddeviationz"   
- [7] "timegravityaccelerometermeanx"             
- [8] "timegravityaccelerometermeany"             
- [9] "timegravityaccelerometermeanz"             
-[10] "timegravityaccelerometerstandarddeviationx"
+ [1] "timebodyaccelerometermeanx"                                    
+ [2] "timebodyaccelerometermeany"                                    
+ [3] "timebodyaccelerometermeanz"                                    
+ [4] "timebodyaccelerometerstandarddeviationx"                       
+ [5] "timebodyaccelerometerstandarddeviationy"                       
+ [6] "timebodyaccelerometerstandarddeviationz"                       
+ [7] "timegravityaccelerometermeanx"                                 
+ [8] "timegravityaccelerometermeany"                                 
+ [9] "timegravityaccelerometermeanz"                                 
+[10] "timegravityaccelerometerstandarddeviationx"                    
+[11] "timegravityaccelerometerstandarddeviationy"                    
+[12] "timegravityaccelerometerstandarddeviationz"                    
+[13] "timebodyaccelerometerjerksignalmeanx"                          
+[14] "timebodyaccelerometerjerksignalmeany"                          
+[15] "timebodyaccelerometerjerksignalmeanz"                          
+[16] "timebodyaccelerometerjerksignalstandarddeviationx"             
+[17] "timebodyaccelerometerjerksignalstandarddeviationy"             
+[18] "timebodyaccelerometerjerksignalstandarddeviationz"             
+[19] "timebodygyroscopemeanx"                                        
+[20] "timebodygyroscopemeany"                                        
+[21] "timebodygyroscopemeanz"                                        
+[22] "timebodygyroscopestandarddeviationx"                           
+[23] "timebodygyroscopestandarddeviationy"                           
+[24] "timebodygyroscopestandarddeviationz"                           
+[25] "timebodygyroscopejerksignalmeanx"                              
+[26] "timebodygyroscopejerksignalmeany"                              
+[27] "timebodygyroscopejerksignalmeanz"                              
+[28] "timebodygyroscopejerksignalstandarddeviationx"                 
+[29] "timebodygyroscopejerksignalstandarddeviationy"                 
+[30] "timebodygyroscopejerksignalstandarddeviationz"                 
+[31] "timebodyaccelerometermagnitudemean"                            
+[32] "timebodyaccelerometermagnitudestandarddeviation"               
+[33] "timegravityaccelerometermagnitudemean"                         
+[34] "timegravityaccelerometermagnitudestandarddeviation"            
+[35] "timebodyaccelerometerjerksignalmagnitudemean"                  
+[36] "timebodyaccelerometerjerksignalmagnitudestandarddeviation"     
+[37] "timebodygyroscopemagnitudemean"                                
+[38] "timebodygyroscopemagnitudestandarddeviation"                   
+[39] "timebodygyroscopejerksignalmagnitudemean"                      
+[40] "timebodygyroscopejerksignalmagnitudestandarddeviation"         
+[41] "frequencybodyaccelerometermeanx"                               
+[42] "frequencybodyaccelerometermeany"                               
+[43] "frequencybodyaccelerometermeanz"                               
+[44] "frequencybodyaccelerometerstandarddeviationx"                  
+[45] "frequencybodyaccelerometerstandarddeviationy"                  
+[46] "frequencybodyaccelerometerstandarddeviationz"                  
+[47] "frequencybodyaccelerometerjerksignalmeanx"                     
+[48] "frequencybodyaccelerometerjerksignalmeany"                     
+[49] "frequencybodyaccelerometerjerksignalmeanz"                     
+[50] "frequencybodyaccelerometerjerksignalstandarddeviationx"        
+[51] "frequencybodyaccelerometerjerksignalstandarddeviationy"        
+[52] "frequencybodyaccelerometerjerksignalstandarddeviationz"        
+[53] "frequencybodygyroscopemeanx"                                   
+[54] "frequencybodygyroscopemeany"                                   
+[55] "frequencybodygyroscopemeanz"                                   
+[56] "frequencybodygyroscopestandarddeviationx"                      
+[57] "frequencybodygyroscopestandarddeviationy"                      
+[58] "frequencybodygyroscopestandarddeviationz"                      
+[59] "frequencybodyaccelerometermagnitudemean"                       
+[60] "frequencybodyaccelerometermagnitudestandarddeviation"          
+[61] "frequencybodyaccelerometerjerksignalmagnitudemean"             
+[62] "frequencybodyaccelerometerjerksignalmagnitudestandarddeviation"
+[63] "frequencybodygyroscopemagnitudemean"                           
+[64] "frequencybodygyroscopemagnitudestandarddeviation"              
+[65] "frequencybodygyroscopejerksignalmagnitudemean"                 
+[66] "frequencybodygyroscopejerksignalmagnitudestandarddeviation" 
 ```
 
 ***
@@ -326,6 +495,84 @@ Tidy data is generated with the average of each variable for each activity and e
  $ timegravityaccelerometermeanx                                 : num  -0.249 -0.51 -0.242 -0.421 -0.483 ...
  $ timegravityaccelerometermeany                                 : num  0.706 0.753 0.837 0.915 0.955 ...
   [list output truncated]
+```
+
+***
+
+
+#####*Adjusted Variables*
+
+Aforementioned steps result in the following 68 variables:
+
+```
+ [1] "activity"                                                      
+ [2] "subject"                                                       
+ [3] "timebodyaccelerometermeanx"                                    
+ [4] "timebodyaccelerometermeany"                                    
+ [5] "timebodyaccelerometermeanz"                                    
+ [6] "timebodyaccelerometerstandarddeviationx"                       
+ [7] "timebodyaccelerometerstandarddeviationy"                       
+ [8] "timebodyaccelerometerstandarddeviationz"                       
+ [9] "timegravityaccelerometermeanx"                                 
+[10] "timegravityaccelerometermeany"                                 
+[11] "timegravityaccelerometermeanz"                                 
+[12] "timegravityaccelerometerstandarddeviationx"                    
+[13] "timegravityaccelerometerstandarddeviationy"                    
+[14] "timegravityaccelerometerstandarddeviationz"                    
+[15] "timebodyaccelerometerjerksignalmeanx"                          
+[16] "timebodyaccelerometerjerksignalmeany"                          
+[17] "timebodyaccelerometerjerksignalmeanz"                          
+[18] "timebodyaccelerometerjerksignalstandarddeviationx"             
+[19] "timebodyaccelerometerjerksignalstandarddeviationy"             
+[20] "timebodyaccelerometerjerksignalstandarddeviationz"             
+[21] "timebodygyroscopemeanx"                                        
+[22] "timebodygyroscopemeany"                                        
+[23] "timebodygyroscopemeanz"                                        
+[24] "timebodygyroscopestandarddeviationx"                           
+[25] "timebodygyroscopestandarddeviationy"                           
+[26] "timebodygyroscopestandarddeviationz"                           
+[27] "timebodygyroscopejerksignalmeanx"                              
+[28] "timebodygyroscopejerksignalmeany"                              
+[29] "timebodygyroscopejerksignalmeanz"                              
+[30] "timebodygyroscopejerksignalstandarddeviationx"                 
+[31] "timebodygyroscopejerksignalstandarddeviationy"                 
+[32] "timebodygyroscopejerksignalstandarddeviationz"                 
+[33] "timebodyaccelerometermagnitudemean"                            
+[34] "timebodyaccelerometermagnitudestandarddeviation"               
+[35] "timegravityaccelerometermagnitudemean"                         
+[36] "timegravityaccelerometermagnitudestandarddeviation"            
+[37] "timebodyaccelerometerjerksignalmagnitudemean"                  
+[38] "timebodyaccelerometerjerksignalmagnitudestandarddeviation"     
+[39] "timebodygyroscopemagnitudemean"                                
+[40] "timebodygyroscopemagnitudestandarddeviation"                   
+[41] "timebodygyroscopejerksignalmagnitudemean"                      
+[42] "timebodygyroscopejerksignalmagnitudestandarddeviation"         
+[43] "frequencybodyaccelerometermeanx"                               
+[44] "frequencybodyaccelerometermeany"                               
+[45] "frequencybodyaccelerometermeanz"                               
+[46] "frequencybodyaccelerometerstandarddeviationx"                  
+[47] "frequencybodyaccelerometerstandarddeviationy"                  
+[48] "frequencybodyaccelerometerstandarddeviationz"                  
+[49] "frequencybodyaccelerometerjerksignalmeanx"                     
+[50] "frequencybodyaccelerometerjerksignalmeany"                     
+[51] "frequencybodyaccelerometerjerksignalmeanz"                     
+[52] "frequencybodyaccelerometerjerksignalstandarddeviationx"        
+[53] "frequencybodyaccelerometerjerksignalstandarddeviationy"        
+[54] "frequencybodyaccelerometerjerksignalstandarddeviationz"        
+[55] "frequencybodygyroscopemeanx"                                   
+[56] "frequencybodygyroscopemeany"                                   
+[57] "frequencybodygyroscopemeanz"                                   
+[58] "frequencybodygyroscopestandarddeviationx"                      
+[59] "frequencybodygyroscopestandarddeviationy"                      
+[60] "frequencybodygyroscopestandarddeviationz"                      
+[61] "frequencybodyaccelerometermagnitudemean"                       
+[62] "frequencybodyaccelerometermagnitudestandarddeviation"          
+[63] "frequencybodyaccelerometerjerksignalmagnitudemean"             
+[64] "frequencybodyaccelerometerjerksignalmagnitudestandarddeviation"
+[65] "frequencybodygyroscopemagnitudemean"                           
+[66] "frequencybodygyroscopemagnitudestandarddeviation"              
+[67] "frequencybodygyroscopejerksignalmagnitudemean"                 
+[68] "frequencybodygyroscopejerksignalmagnitudestandarddeviation"   
 ```
 
 
