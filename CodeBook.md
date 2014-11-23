@@ -279,7 +279,7 @@ The training and test data are combined.
 ***
 
 
-#####*Original Variable Names*
+#####*Original Feature Variable Names*
 
 Original variable names contain both upper and lower cases, as well as abbreviations, dashes, and brackets. Only variable names that contain information on mean and standard deviation are selected.
 
@@ -306,7 +306,7 @@ Original variable names contain both upper and lower cases, as well as abbreviat
 ***
 
 
-#####*Adjusted Variable Names*
+#####*Adjusted Feature Variable Names*
 
 For this course project variable names are adjusted to improve clarity. Adjusted names, therefore, contain lower cases; abbreviations, dashes, and brackets are removed.
 
