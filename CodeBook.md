@@ -578,7 +578,7 @@ Aforementioned steps result in the following 68 variables:
 
 ***
 
-#####*Comments*
+#####*Summary*
 
 This Code Book provides a concise overview of the data and variables, and of the data cleaning steps. Briefly, the *UCI HAR Dataset* consists of training (**Train Data**) and test data sets (**Test Data**), each containing data on specific activities (*Activity*), subjects (*Subject*), and features (*Feature*). For the activity, subject and feature data separately, training and test data sets are combined. Subsequently, appropriate variable names are inserted, and measurements on mean and standard deviation are selected. The activity, subject and feature data are then combined, and descriptive activity names are added. After melting the combined data, tidy data is generated that contains the average of each variable for each activity and each subject. The tidy data comprises 180 observations and 68 variables, including one activity variable, one subject variable, and 66 feature variables.    
 
